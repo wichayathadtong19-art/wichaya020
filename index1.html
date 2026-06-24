@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัวเอง - Wichaya Thadtong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* จัดการภาพรวมของหน้าเว็บ */
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f7f9;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* กล่องเนื้อหาหลัก (Card) */
+        .container {
+            max-width: 700px;
+            width: 90%;
+            background-color: #ffffff;
+            margin: 40px 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        /* หัวข้อหลัก */
+        h1 {
+            color: #1d3557;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* ปรับรูปเป็นวงกลม */
+            border: 5px solid #e63946;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* ส่วนข้อมูลประวัติ */
+        .bio-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: left;
+            line-height: 1.6;
+            border-left: 5px solid #1d3557;
+        }
+
+        /* ตารางข้อมูลพื้นฐาน */
+        .info-table {
+            width: 100%;
+            margin-bottom: 25px;
+            border-collapse: collapse;
+        }
+        .info-table td {
+            padding: 10px;
+            text-align: left;
+        }
+        .info-table td.label {
+            font-weight: 600;
+            color: #e63946;
+            width: 35%;
+        }
+
+        /* สไตล์ปุ่มลิงก์ */
+        .btn-link {
+            display: inline-block;
+            background-color: #1d3557;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+            margin-top: 5px;
+        }
+        .btn-link:hover {
+            background-color: #e63946;
+        }
+
+        /* ส่วนของสื่อบันเทิง (เพลง/วิดีโอ) */
+        .media-box {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+        }
+        .media-item {
+            margin: 15px 0;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* ส่วนท้ายหน้าและปุ่มไปต่อ */
+        .next-page-section {
+            margin-top: 25px;
+            background-color: #ffe3e3;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .next-page-section p {
+            color: #e63946;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .btn-next {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-family: 'Kanit', sans-serif;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-next:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="FEW.jpg" alt="รูปของฉัน" class="profile-img">
+        
+        <h1>My name is Wichaya Thadtong</h1>
+
+        <div class="bio-section">
+            <h3 style="margin-top: 0; color: #1d3557;">ยินดีที่ได้รู้จักครับ!</h3>
+            <p style="margin: 0;">
+                สวัสดีครับผมชื่อวิชญะ ชื่อเล่น <strong>ฟิว</strong> บ้านอยู่สันป่าตองบ้านเฮา ก่อนมาวิทยาลัยเทคนิคเชียงใหม่ ผมเรียนที่ สันป่าตองวิทยาคม ผมชอบเล่นเกม ตกปลา แต่งรถ มากครับ ความคิดในอนาคตคือการทำเครื่อง 66/7 4V ครับ
+            </p>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td class="label">วันเดือนปีเกิด</td>
+                <td>19/11/2552</td>
+            </tr>
+            <tr>
+                <td class="label">อายุ</td>
+                <td>16 ปี</td>
+            </tr>
+            <tr>
+                <td class="label">สถานศึกษาปัจจุบัน</td>
+                <td>วิทยาลัยเทคนิคเชียงใหม่</td>
+            </tr>
+            <tr>
+                <td class="label">สิ่งที่ชอบ</td>
+                <td>ตกปลา, แต่งรถ, เล่นเกม</td>
+            </tr>
+            <tr>
+                <td class="label">ช่องทางติดต่อ</td>
+                <td>
+                    <a href="https://www.facebook.com/share/1B61hTHYXc/?mibextid=wwXIfr" target="_blank" class="btn-link">
+                        Facebook
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="media-box">
+            <h3 style="color: #1d3557;">วิดีโอ & เพลงที่ชอบ</h3>
+            
+            <div class="media-item">
+                <video controls>
+                    <source src="DOM.mp4" type="video/mp4">
+                    <source src="DOM.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="media-item">
+                <audio controls style="width: 100%; max-width: 400px;">
+                    <source src="ภาพฝันในจักรวาล.ogg" type="audio/ogg">
+                    <source src="ภาพฝันในจักรวาล.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="next-page-section">
+            <p>อยากรู้จักมากขึ้นไหม คลิกเลย</p>
+            <button class="btn-next" onclick="document.location='index2.html'">go to Part2</button>
+        </div>
+    </div>
+
+</body>
+</html>

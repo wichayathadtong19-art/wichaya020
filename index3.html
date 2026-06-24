@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้า 3 - ตารางกิจวัตร</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* จัดการภาพรวมของหน้าเว็บ */
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f7f9;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* กล่องเนื้อหาหลัก (Card) */
+        .container {
+            max-width: 800px; /* ขยายกว้างขึ้นเล็กน้อยเพื่อให้ตารางดูไม่อึดอัด */
+            width: 95%;
+            background-color: #ffffff;
+            margin: 40px 10px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ส่วนหัวหน้าเว็บ */
+        .page-header {
+            text-align: center;
+            border-bottom: 2px dashed #eeeeee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .page-header h1 {
+            color: #1d3557;
+            margin: 0 0 15px 0;
+            font-size: 2rem;
+        }
+
+        /* ส่วนนำทาง / ปุ่มเปลี่ยนหน้า */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn-nav {
+            background-color: #f8f9fa;
+            color: #1d3557;
+            border: 2px solid #1d3557;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-family: 'Kanit', sans-serif;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        .btn-nav:hover {
+            background-color: #1d3557;
+            color: white;
+        }
+
+        /* หัวข้อตาราง */
+        h2 {
+            color: #e63946;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+
+        /* ตกแต่งตารางใหม่ (Modern Table Style) */
+        .table-responsive {
+            overflow-x: auto; /* ทำให้ตารางเลื่อนซ้ายขวาได้ถ้าจอเล็กเกินไป */
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden; /* ทำให้มุมตารางมน */
+            border: none;
+        }
+
+        th {
+            background-color: #1d3557;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 1rem;
+        }
+
+        /* สลับสีแถวตารางเพื่อให้ดูง่าย (Zebra Stripes) */
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้แถว */
+        tr:hover {
+            background-color: #f1f4f8;
+            transition: 0.2s;
+        }
+
+        /* ปรับแต่งคอลัมน์ "วัน" ให้เด่นขึ้น */
+        .day-column {
+            font-weight: 600;
+            color: #1d3557;
+            width: 15%;
+        }
+
+        .time-column {
+            color: #e63946;
+            font-weight: 500;
+            width: 25%;
+        }
+
+        /* ข้อความแจ้งเตือนด้านล่าง */
+        .footer-note {
+            text-align: center;
+            color: #888888;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <h1>หน้า 3: ตารางกิจวัตร</h1>
+            <div class="nav-buttons">
+                <button class="btn-nav" onclick="document.location='index.html'">หน้าเเรก</button> 
+                <button class="btn-nav" onclick="document.location='index2.html'">หน้า 2</button> 
+            </div>
+        </div>
+
+        <h2>📅 แผนผังกิจกรรมประจำสัปดาห์</h2>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>วัน</th>
+                        <th>เวลา</th> 
+                        <th>กิจกรรม</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="day-column">อาทิตย์</td>
+                        <td class="time-column">10:00 - 17:00</td>
+                        <td>ตกปลา, แต่งรถ, ล้างรถ, เตรียมตัวไปเรียนวันถัดไป</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">จันทร์</td>
+                        <td class="time-column">08:00 - 16:00</td>
+                        <td>เรียนหนังสือที่วิทยาลัย</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">อังคาร</td>
+                        <td class="time-column">08:00 - 17:00</td>
+                        <td>เรียนหนังสือที่วิทยาลัย</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">พุธ</td>
+                        <td class="time-column">08:00 - 17:00</td>
+                        <td>เรียนหนังสือที่วิทยาลัย</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">พฤหัสบดี</td>
+                        <td class="time-column">08:00 - 17:00</td>
+                        <td>เรียนหนังสือที่วิทยาลัย</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">ศุกร์</td>
+                        <td class="time-column">08:00 - 13:00</td>
+                        <td>เรียนหนังสือที่วิทยาลัย</td>
+                    </tr>
+                    <tr>
+                        <td class="day-column">เสาร์</td>
+                        <td class="time-column">08:00 - 11:00</td>
+                        <td>ทำงานบ้าน หรือ ทำการบ้านที่ได้รับจากวิทยาลัย</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="footer-note">* </p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้า 2 - พัฒนาตนเอง</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* จัดการภาพรวมของหน้าเว็บ */
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f7f9;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* กล่องเนื้อหาหลัก (Card) */
+        .container {
+            max-width: 700px;
+            width: 90%;
+            background-color: #ffffff;
+            margin: 40px 20px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ส่วนหัวหน้าเว็บ */
+        .page-header {
+            text-align: center;
+            border-bottom: 2px dashed #eeeeee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .page-header h1 {
+            color: #1d3557;
+            margin: 0 0 15px 0;
+            font-size: 2rem;
+        }
+
+        /* ส่วนนำทาง / ปุ่มเปลี่ยนหน้า */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn-nav {
+            background-color: #f8f9fa;
+            color: #1d3557;
+            border: 2px solid #1d3557;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-family: 'Kanit', sans-serif;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        .btn-nav:hover {
+            background-color: #1d3557;
+            color: white;
+        }
+
+        /* หัวข้อย่อยในหน้า */
+        h2 {
+            color: #e63946;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            border-left: 4px solid #e63946;
+            padding-left: 10px;
+        }
+        .sub-title {
+            color: #666666;
+            margin: 0 0 15px 0;
+            font-size: 1rem;
+        }
+
+        /* ปรับแต่งรายการจัดลำดับ (Ordered List) ให้ดูทันสมัย */
+        ol {
+            padding-left: 0;
+            list-style: none; /* เอาตัวเลขเดิมออกเพื่อสร้างสไตล์เอง */
+            counter-reset: my-counter; /* สร้างตัวนับเลขเอง */
+            margin-bottom: 20px;
+        }
+        ol li {
+            counter-increment: my-counter;
+            background-color: #f8f9fa;
+            margin-bottom: 8px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        ol li::before {
+            content: counter(my-counter); /* ดึงตัวนับมาแสดง */
+            background-color: #1d3557;
+            color: white;
+            font-weight: bold;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* ส่วนของรูปภาพ */
+        .img-container {
+            text-align: center;
+            margin: 20px 0 35px 0;
+        }
+        .section-img {
+            max-width: 100%;
+            width: 450px; /* ขยายขนาดรูปเพิ่มขึ้นเล็กน้อยเพื่อความชัดเจน */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <h1>หน้า 2: พัฒนาตนเอง</h1>
+            <div class="nav-buttons">
+                <button class="btn-nav" onclick="document.location='index.html'">← กลับหน้าเเรก</button> 
+                <button class="btn-nav" onclick="document.location='index3.html'">ไปยังหน้า 3 →</button> 
+            </div>
+        </div>
+
+        <h2>รายการทักษะที่ต้องการพัฒนา</h2>
+        <p class="sub-title">เป้าหมายและสิ่งที่เราต้องการปรับปรุงให้ดียิ่งขึ้น</p>
+        
+        <ol>
+            <li>เขียนโปรเเกรมคอมให้เก่งขึ้น</li>
+            <li>ตั้งใจเรียนมากกว่าเดิม</li>
+            <li>ลดการเล่นเกม</li>
+            <li>ฝึกพูดภาษาอังกฤษ</li>
+            <li>พยายามไม่พูดเร็ว</li>
+        </ol>  
+
+        <div class="img-container">
+            <img src="few1.jpg" alt="รูปภาพประกอบทักษะ" class="section-img">
+        </div>
+
+        <h2>ลำดับอาชีพที่อยากจะทำในอนาคต</h2>
+        <p class="sub-title">เส้นทางอาชีพและเป้าหมายในวันข้างหน้า</p>
+
+        <ol>
+            <li>เกมเมอร์</li>
+            <li>นักกีฬา</li>
+            <li>เป็น CEO บริษัทใหญ่</li>
+            <li>นักเทรด</li>
+            <li>เป็น CEO</li>
+            <li>นักตกปลา</li>
+        </ol>  
+
+        <div class="img-container">
+            <img src="few2.jpg" alt="รูปภาพประกอบอาชีพ" class="section-img">
+        </div>
+
+    </div>
+
+</body>
+</html>
